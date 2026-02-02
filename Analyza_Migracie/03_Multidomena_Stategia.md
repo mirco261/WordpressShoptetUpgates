@@ -18,9 +18,26 @@ Shoptet štandardne funguje ako **1 e-shop = 1 projekt**.
 - **Možnosť C (Multioschod):** Mať 3 samostatné Shoptet projekty (3x mesačný poplatok) a prepojiť im sklady cez externý doplnok alebo synchronizačný mostík.
 - **Výsledok:** Shoptet je pre scenár "3 jazyky na 3 rôznych doménach" administratívne aj finančne náročnejší (často znamená spravovať 3 adminy alebo platiť drahé synchronizácie).
 
+## 3. Porovnanie Trackingu a Dát (GTM / GA4 / Google Ads)
+Toto je kľúčový bod pre performance marketing a vyhodnocovanie ROI.
+
+### Upgates (Jedna administrácia = Jedna logika)
+- **Centralizácia:** Keďže ide o jeden systém, dátová vrstva (DataLayer) je konzistentná pre všetky jazyky.
+- **GTM & Google Ads:** Hodnoty objednávok (purchase value), meny a ďalšie parametre sa posielajú jednotným spôsobom.
+    - Ak máte nastavené posielanie dát do GA4 cez GTM, preposlanie do Google Ads (konverzie) je priamočiare.
+    - Nemusíte nastavovať a ladiť 3 rôzne e-shopy. Ak to funguje pre SK, bude to fungovať aj pre PL a CZ (s príslušnou menou).
+- **Flexibilita:** Upgates má pomerne otvorený prístup k úprave kódov v hlavičke, čo uľahčuje nasadenie vlastných skriptov pre všetky domény naraz.
+
+### Shoptet (Separované inštancie)
+- **Rozdrobenosť:** Pri riešení formou 3 samostatných e-shopov (Možnosť C) musíte GTM a konverzné kódy nasadzovať a udržiavať **3x**.
+- **Náklady na doplnky:** Kvalitná dátová vrstva (DataLayer) v Shoptete je často riešená cez externé platené doplnky. Pri 3 e-shopoch platíte tieto doplnky 3x.
+- **Riziko chýb:** Pri zmenách v nastavení (napr. zmena logiky výpočtu marže pre Ads) musíte úpravu replikovať na všetkých doménach manuálne.
+
 ## Záver pre vaše zadanie
-Ak trváte na **3 samostatných doménach** (SEO, dôveryhodnosť trhu) a chcete to riadiť z **jedného miesta**:
--> **Upgates je technicky lepšie riešenie.**
+Ak trváte na **3 samostatných doménach** a potrebujete spoľahlivý **centralizovaný tracking** (posielanie hodnôt do Google Ads/GA4 bez nutnosti trojnásobnej údržby):
+-> **Upgates je jednoznačný víťaz.**
+
+Nielenže technicky zvláda domény na jednom mieste, ale aj dátová analytika a správa tagov bude výrazne jednoduchšia a menej náchylná na chyby.
 
 Ak by ste ustúpili z domén a stačilo by `mojeshop.sk/pl`:
--> **Shoptet** to zvládne jedným doplnkom.
+-> **Shoptet** to zvládne, ale stále s istými obmedzeniami v SEO a flexibilite úprav.
